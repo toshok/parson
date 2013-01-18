@@ -510,7 +510,6 @@ JSON_Value * json_parse_file(const char *filename) {
 }
 
 JSON_Value * json_parse_string(const char *string) {
-    if (!string || (*string != '{' && *string != '[')) { return NULL; }
     return parse_value((const char**)&string, 0);
 }
 
